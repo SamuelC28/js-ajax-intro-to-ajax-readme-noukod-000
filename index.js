@@ -1,11 +1,3 @@
-
-function getRepositories() {
-  function getRepositories() {
-  const req = new XMLHttpRequest();
-  req.open('GET', 'https://api.github.com/users/octocat/repos');
-  req.send();
-}
-
 function showRepositories() {
 
   var repos = JSON.parse(this.responseText);
@@ -22,6 +14,14 @@ function showRepositories() {
     .join('')}</ul>`;
   document.getElementById('repositories').innerHTML = repoList;
 }
+
+function getRepositories() {
+  function getRepositories() {
+  const req = new XMLHttpRequest();
+  req.open('GET', 'https://api.github.com/users/octocat/repos');
+  req.send();
+}
+
 
 
 function getCommits(el) {
